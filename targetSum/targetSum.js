@@ -29,7 +29,7 @@ var targetSum = function(array, n){
       res.push(array[i]);
       res.push(array[j]);
       compare = sum; 
-    };
+    }
     j++;
 
     if (j === array.length) {
@@ -38,6 +38,9 @@ var targetSum = function(array, n){
     }
   }
 
+  if (res.length === 0) {
+    return null
+  }
   return res;
 }
 
