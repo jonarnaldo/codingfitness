@@ -31,6 +31,37 @@
 
 
 var tapeEquilibrium = function(array) {
- // code here
+  // code here
+  // given P < N
+  var p = array.length - 1;
+  var min, leftReduced, rightReduced;
+  var diff = undefined;
+  // loop through array
+  for (var i  = 0; i < array.length - 1; i++) {
+    leftReduced = array.slice(0,i + 1).reduce(function(prev, current) {
+      return prev + current;
+    });
 
+    rightReduced = array.slice(i + 1).reduce(function(prev, current) {
+      return prev + current;
+    });
+
+    diff = Math.abs(leftReduced - rightReduced);
+    if (!min) {
+      min = diff
+    } else {
+      if ( diff < min) {
+        min = diff;
+      }
+    }
+   }
+
+   return min;
+  // look to left of index and sum, including number at index
+  // look to right of index and sum, excluding number at index
+  // find absolute value of left - right
+  // if absolute value of left - right < min
+    // min = absolute vale of left - right
+
+  // return min
 };
