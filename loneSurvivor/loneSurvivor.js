@@ -19,4 +19,25 @@
 
 var loneSurvivor = function(chairs, skip) {
   //your code here
+  var duck = 0;
+  var chair;
+  debugger;
+
+  for (var i = 0; i < chairs.length; i++) {
+    var val = chair[i];
+    chairs[duck] = false;
+    duck++;
+    duck = val + duck;
+  }
+
+
+  return chair;
 };
+
+// 1, 2
+// 3, 3
+// 6, 4
+// 10, 5
+// 15, 6
+
+
